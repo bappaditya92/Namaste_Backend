@@ -3,7 +3,7 @@ import { User } from "../models/user";
 export const register = async ()=>{
     try {
         const {fullName, email, password} = request.body;
-        if(!fullName || email || !password){
+        if(!fullName || !email || !password){
             return res.status(403).json({
                 success: false,
                 message: "All field are required."
